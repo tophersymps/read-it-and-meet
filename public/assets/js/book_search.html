@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Book Search</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Book Search</h1>
+
+
+    <!-- This form will be where users input data about the movies -->
+    <form id="book-form">
+      <label for="book-input">Search for a book</label>
+      <input type="text" id="book-input" placeholder=" title or author "><br>
+
+      <!-- This button will trigger our AJAX call -->
+      <input id="find-book" type="submit" value="Book Search">
+    </form>
+
+    <!-- Dump response from JSON here -->
+    <div class="have-read">
+      <h3>Books I Want To Read</h3>
+      <div class="book-view"></div>
+        
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      // This .on("click") function will trigger the AJAX Call
+      $("#find-book").on("click", function(event) {
+
+        event.preventDefault();
+
+        var book = $("#book-input").val();
+        // var result = $(".book-view").html("");
+        var queryURL = "https://www.googleapis.com/books/v1/volumes?q=search" + book;
+
+        $.ajax({
+            url: queryURL,
+            dataType: "json",
+
+            success: function (data){
+              // console.log(data);
+            },
+
+            type: "GET"
+        })
+        .then(function(response) {
+            console.log(queryURL);
+            // console.log(response);
+            var results = response.items;
+
+            for (var i = 0; i < results.length; i++) {
+              console.log(results[i].volumeInfo.title);
+
+              var bookImage = $("<img>");
+              bookImage.attr("src", results[i].volumeInfo.imageLinks.thumbnail);
+              var bookImageUrl = results[i].volumeInfo.imageLinks.thumbnail;
+
+              $(".book-view").append(
+                  "Book Title: " + results[i].volumeInfo.title + "<br>" +
+                  "Author: " + results[i].volumeInfo.authors + "<br>" + "<br>");
+              $(".book-view").append(bookImage);
+              $(".book-view").append("<br>" + "<br>");
+            }
+            
+        })
+      });
+      
+    </script>
+  </div>
+</body>
+</html>
