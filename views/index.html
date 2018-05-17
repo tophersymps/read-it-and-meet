@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Read It & Meet | Virtual Book Club</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!--Custom Styles-->
+  <link rel="stylesheet" href="../public/assets/css/styles.css">
+</head>
+
+<body class="landing">
+
+  <div id="page-wrapper">
+
+  <!-- Banner -->
+  <section id="banner" class="banner-container">
+    
+        <div class="row flex-s">
+          <div class="col s12 m8">
+              <div class="inner">
+                  <h2><img src="../public/assets/images/logo.png" alt="" /></h2>
+                  <p>An place for people to find and create virtual book clubs<br>
+                    based on similar reading interests.</p>
+                </div>
+          </div>
+          <div class="col s12 m4">
+              
+                    <div class="card white">
+                      <div class="card-content black-text">
+                        <span class="card-title">Sign In Now</span>
+
+                        <div class="login-wrap">
+                          <input type="text" class="form-control" placeholder="User ID" autofocus>
+                          <br>
+                          <input type="password" class="form-control" placeholder="Password">
+
+                          <button class="btn waves-effect waves-light" type="submit" name="action">Sign In
+                            <i class="material-icons left">lock</i>
+                          </button>
+                      </div>
+          
+                      </div>
+                      <div class="card-action">
+                        <div class="login-social-link centered">
+                          <p class="black-text">or you can sign in via your social network</p>
+                              <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+                              <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+                          </div>
+                          <div class="registration">
+                              Don't have an account yet?<br/>
+                              <a class="" href="#">
+                                  Create an account
+                              </a>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+      </div>
+  </section>
+
+  <!-- Features -->
+  <section id="two" class="wrapper alt style2">
+      <section class="spotlight">
+        <div class="image"><img src="../public/assets/images/pic01.jpg" alt="" /></div><div class="content">
+          <h2>Magna primis lobortis<br />
+          sed ullamcorper</h2>
+          <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        </div>
+      </section>
+      <section class="spotlight">
+        <div class="image"><img src="../public/assets/images/pic02.jpg" alt="" /></div><div class="content">
+          <h2>Tortor dolore feugiat<br />
+          elementum magna</h2>
+          <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        </div>
+      </section>
+      <section class="spotlight">
+        <div class="image"><img src="../public/assets/images/pic03.jpg" alt="" /></div><div class="content">
+          <h2>Augue eleifend aliquet<br />
+          sed condimentum</h2>
+          <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        </div>
+      </section>
+    </section>
+
+
+    <!-- <section class="wrapper style4">
+        <div class="row flex-s">
+          <div class="col s12 m8">
+              <div class="inner">
+                  <h2>Read It & Meet</h2>
+                  <p>Another fine responsive 
+                  site template freebie 
+                  crafted by.</p>
+                </div>
+          </div>
+          <div class="col s12 m4">
+            <ul class="actions vertical">
+              <li><a class="waves-effect waves-light btn">button</a></li>
+              <li><a href="#" class="button fit">Learn More</a></li>
+            </ul>       
+      </div>
+  </section> -->
+
+  <footer class="page-footer">
+    <div class="footer-copyright">
+      <div class="container">
+        &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet"><img src="../public/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://elark2016.github.io/Draft-Hopper/assets/pages/beerInfo.html" target="_blank">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+</div>
+
+  <!-- Minified jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <!-- Google Stuff -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM&libraries=places&callback=initMap"
+    async defer></script>
+
+  <!-- RSS Feed -->
+  <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
+
+  <!-- Custom javascript -->
+  <!-- <script src="assets/js/beerData.js"></script> -->
+  <script src="../public/assets/js/app.js"></script>
+  <!-- <script src="assets/js/map.js"></script> -->
+
+  <script>
+  (function($){
+  $(function(){
+    $('.parallax').parallax();
+    $('.button-collapse').sideNav();
+    $('ul.tabs').tabs();
+  }); // end of document ready
+})(jQuery); // end of jQuery name space
+  </script>
+
+</body>
+</html>
