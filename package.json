@@ -1,10 +1,11 @@
 {
-  "name": "mvc_design",
+  "name": "read-it-and-meet",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 2",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "node server.js",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,9 +13,18 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-handlebars": "^2.0.1",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "sequelize-cli": "^4.0.0"
   },
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tophersymps/read-it-and-meet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tophersymps/read-it-and-meet/issues"
+  },
+  "homepage": "https://github.com/tophersymps/read-it-and-meet#readme"
 }
