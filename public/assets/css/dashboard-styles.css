@@ -1,4 +1,25 @@
+.add-book {
+  color: #0277bd;
+}
 
+.book-collection {
+  display: inline-block;
+  height: 3.5rem;
+  vertical-align: top;
+  padding: 5px 10px;
+}
+
+.add-book a:hover {
+  color: #039be5;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #0277bd;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+  color: #039be5;
+}
 
 .book-card {
   position: relative;
@@ -24,8 +45,9 @@
   font-weight: 300;
 }
 
-
-
+nav {
+  background-color: #434A5B;
+}
 
 
 /*----------------------------------------
@@ -107,6 +129,9 @@ select {
   .container {
     width: 98%;
   }
+  .btn-pad {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 993px) {
@@ -174,7 +199,7 @@ select {
   vertical-align: bottom;
 }
 
-.avatar-status i {
+.avatar-status span {
   position: absolute;
   right: -2px;
   bottom: 18px;
@@ -202,20 +227,8 @@ select {
   border-radius: 1000px;
 }
 
-.avatar-online i {
+.avatar-online span {
   background-color: #00E676;
-}
-
-.avatar-off i {
-  background-color: #bdbdbd;
-}
-
-.avatar-busy i {
-  background-color: #FF1744;
-}
-
-.avatar-away i {
-  background-color: #ffc400;
 }
 
 .avatar-100 {
@@ -568,12 +581,6 @@ header .brand-logo img {
 }
 
 @media only screen and (max-width: 992px) {
-  aside .nav-wrapper {
-    text-align: center;
-  }
-  aside .nav-wrapper a.page-title {
-    font-size: 36px;
-  }
   aside .brand-sidebar {
     box-shadow: none;
     left: calc(50% - 120px);
@@ -761,13 +768,9 @@ ul.side-nav.leftside-navigation li:not(.no-padding) a {
 }
 
 ul.side-nav.leftside-navigation li:not(.no-padding).user-details {
-  background: url("../../../images/gallary/12.png") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: #f5f5f5;
   margin-bottom: 15px;
-  padding: 15px 0 0 15px;
+  padding: 20px 0;
 }
 
 ul.side-nav.leftside-navigation li:not(.no-padding).user-details #profile-dropdown a {
@@ -862,6 +865,7 @@ ul.side-nav .collapsible-header.active:after {
 
 .user-details .row {
   margin: 0;
+  
 }
 
 .bold > a {
@@ -885,9 +889,9 @@ footer {
 }
 
 footer.page-footer {
-  padding-top: 1px;
+  background-color: #434A5B;
 }
 
 .page-footer .container {
-  padding: 0 15px;
+  padding: 0 15px 15px;
 }
