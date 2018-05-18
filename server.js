@@ -1,5 +1,9 @@
 var express = require("express");
+var passport = require("passport");
+var session = require("express-session");
 var bodyParser = require("body-parser");
+var env = require("dotenv").load();
+// TODO: Need to install MYSQL2 "npm install mysql2"
 
 var PORT = process.env.PORT || 8080;
 
@@ -14,19 +18,52 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+// Middleware for Passport
+app.use(session({
+  secret: "keyboard cat",
+  resave: true,
+  saveUninitialized: true
+})); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // Persistant login sessions
+
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+app.set("views", "./views");
+app.engine("hbs", exphbs({ 
+  extname: ".hbs",
+  defaultLayout: "signin" 
+}));
+app.set("view engine", ".hbs");
 
-// Import routes and give the server access to them.
-var routes = require("./controllers/burgersController.js");
+// Initiate Home Page? // TODO: Is this necessary
+// app.get('/dashboard', function(req, res) {
+ 
+//   res.send('Welcome to Passport with Sequelize');
 
-app.use(routes);
+// });
 
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
+// Models FIXME: Potentially move to a new 'app' folder
+var models = require("./models");
+
+// Routes
+var authRoute = require("./routes/auth")(app, passport);
+
+// Load Passport Strategies
+require("./config/passport/passport")(passport, models.user);
+
+// Sync Database
+models.sequelize.sync().then(function() {
+  console.log("Nice! Database looks fine!");
+}).catch(function(err) {
+  console.log(err, "Something went wrong with the Database Update...");
+});
+
+app.listen(5000, function(err) {
+  if (!err) {
+    console.log("Site is live! visit: http://localhost:5000");
+  } else {
+    console.log(err);
+  }
 });
