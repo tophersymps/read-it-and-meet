@@ -6,13 +6,13 @@ module.exports = function(app, passport) {
     app.get('/signup', authController.signup);
  
  
-    app.get('/signin', authController.signin);
+    app.get('/', authController.signin);
  
  
     app.post('/signup', passport.authenticate('local-signup', {
             successRedirect: '/dashboard',
  
-            failureRedirect: '/signup'
+            failureRedirect: '/'
         }
  
     ));
@@ -27,14 +27,14 @@ module.exports = function(app, passport) {
          
             return next();
              
-        res.redirect('/signin');
+        res.redirect('/');
      
     };
 
     app.post('/signin', passport.authenticate('local-signin', {
         successRedirect: '/dashboard',
  
-        failureRedirect: '/signin'
+        failureRedirect: '/'
     }
  
 ));
