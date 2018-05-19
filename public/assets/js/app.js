@@ -9,16 +9,16 @@ $(function() {
 	$("#card-alert .close").click(function() {
 		$(this).closest('#card-alert').fadeOut('slow');
 	});
+
+	$("#close-search").on("click", function(event) {
+		$(".close").hide(newSeach);
+	
 	
 });
 
+function search() {
 
-$("#search-book").on("click", function(event) {
-	event.preventDefault();
-
-	
-	
-	var newSearch = [`
+var newSearch = [`
 	<div class="row">
 													<div class="col s12 m12">
 														<div id="card-alert" class="card box-shadow-none" style="background-color:#f5f5f5">
@@ -54,18 +54,23 @@ $("#search-book").on("click", function(event) {
 															
 														</div>
 													</div>
-												</div>
+												</div>`];
 
+												$(".searchBook").append(newSearch);
 
+}
 
-	`];
+$("#search-book").on("click", function(event) {
+	event.preventDefault();
 
-	$("#close-search").on("click", function(event) {
-	$(".close").hide(newSeach);
+	
+	search();
+	
+	
 });
 
 	// Append books to search section
-	$(".searchBook").append(newSearch);
+	
 
 });
 
@@ -103,7 +108,7 @@ $("#find-book").on("click", function(event) {
 
 				// Create button for books to add
 				// Buttons are dynamically created for each result that is returned from the api
-				var readButton = [`<a href="#"><i class="material-icons">add</i>Add Book</a>`];
+				var readButton = [`<br><a href="#"><i class="material-icons">add</i>Add Book</a>`];
 				
 				// Book title, author and book cover image are displayed to the page based on api search results
 				var newBook = [`<div class="col s12 m6 l3">
