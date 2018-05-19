@@ -7,83 +7,75 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Read It & Meet</title>
 
-  <!-- Import Fonts -->
+  <!--Import Fonts-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="../public/assets/css/styles.css">
+  <!--Custom Styles-->
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body class="landing">
   <div id="page-wrapper">
-
     <section id="banner" class="banner-container">
       <div class="row flex-s">
         <div class="col s12 m6 l8">
           <div class="container">
-            <h2><img src="../public/assets/images/logo.png" width="255" height="147" alt="" /></h2>
+            <h2><img src="/assets/images/logo.png" width="255" height="147" alt="" /></h2>
             <p>An place for people to find and create virtual book clubs based on similar reading interests.</p>
           </div>
         </div>
         <div class="col s12 m6 l4">
+          <form class="card sign-in" id="signin" name="signin" method="post" action="signin">
 
-            
-                  <div class="card sign-in">
-                    <div class="card-content black-text">
-                      <span class="card-title">Sign In Now</span>
-                      <div class="input-field">
-                        <i class="material-icons prefix">account_circle</i>
-                        <input placeholder="User ID" id="user_id" type="text" class="validate">
-                      </div>
-                      <div class="input-field">
-                        <i class="material-icons prefix">lock</i>
-                        <input placeholder="Password" id="password" type="password" class="validate">
-                      </div>
-                      <a class="waves-effect waves-light light-blue darken-3 btn"><i class="material-icons left">keyboard_tab</i>Sign In</a>
-                    </div>
-                    <div class="card-action">
-                        <p class="black-text">or you can sign in via your social network</p>
-                        <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
-                        <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
-                    </div>
-                    <div>
-                        Don't have an account yet?<br/>
-                        <a class="" href="#">
-                        Create an account
-                        </a>
-                        </div>
-                  </div>
-          
+            <div class="card-content black-text">
+              <span class="card-title">Sign In Now</span>
+              <div class="input-field">
+                <i class="material-icons prefix">account_circle</i>
+                <input placeholder="User Email" id="email" name="email" type="text" class="validate" placeholder="User Email">
+              </div>
+              <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input placeholder="Password" id="password" name="password" type="password" class="validate">
+              </div>
+              <button class="waves-effect waves-light light-blue darken-3 btn" type="submit" value="Sign In"><i class="material-icons left">keyboard_tab</i>Sign In</button>
+            </div>
+            <div class="card-action">
+                <p class="black-text">or you can sign in via your social network</p>
+                <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+                <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+            </div>
+            <div>
+                Don't have an account yet?<br/>
+                <a class="" href="/signup">
+                Create an account
+                </a>
+                </div>
+          </form>          
         </div>
       </div>
     </section>
 
-
-
-
-
-
-  <!-- Features -->
-  <section id="features">
+    <!-- Features -->
+    <section id="features">
       <div class="feature">
-        <div class="image"><img src="../public/assets/images/pic01.jpg" alt="" /></div><div class="content">
+        <div class="image"><img src="/assets/images/pic01.jpg" alt="" /></div><div class="content">
           <h2>Sign Up</h2>
           <p>Create a free account to start organinzing your reading library.</p>
         </div>
       </div>
       
       <div class="feature">
-        <div class="image"><img src="../public/assets/images/pic02.png" alt="" /></div><div class="content">
+        <div class="image"><img src="/assets/images/pic02.png" alt="" /></div><div class="content">
           <h2>Search for Books</h2>
           <p>Easily search for books to </p>
         </div>
       </div>
       <div class="feature">
-        <div class="image"><img src="../public/assets/images/pic03.jpg" alt="" /></div><div class="content">
+        <div class="image"><img src="/assets/images/pic03.jpg" alt="" /></div><div class="content">
           <h2>Augue eleifend aliquet<br />
           sed condimentum</h2>
           <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
@@ -93,46 +85,41 @@
 
 
     <section>
-        <div class="row flex-s">
-            <div class="container">
-      <div class="col s12 m4 l4">
-          <div class="icon-block">
+      <div class="row flex-s">
+        <div class="container">
+          <div class="col s12 m4 l4">
+            <div class="icon-block">
               <h2 class="center white-text"><i class="material-icons">group</i></h2>
               <h5 class="center white-text">User Experience Focused</h5>
-  
-              <p class="light white-text">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+
+              <p class="light white-text">By utilizing elements and principles of Material  Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
             </div>
-      </div>
-      <div class="col s12 m4 l4">
-          <div class="icon-block">
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="icon-block">
               <h2 class="center white-text"><i class="material-icons">group</i></h2>
               <h5 class="center white-text">User Experience Focused</h5>
-  
+
               <p class="light white-text">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
             </div>
-      </div>
-      <div class="col s12 m4 l4">
-          <div class="icon-block">
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="icon-block">
               <h2 class="center white-text"><i class="material-icons">group</i></h2>
               <h5 class="center white-text">User Experience Focused</h5>
-  
+
               <p class="light white-text">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
             </div>
+          </div>
+        </div>
       </div>
-</div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="page-footer">
-    <div class="container">&copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet" class="white-text"><img src="../public/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>
-    </div>
-  </footer>
-
-
-
-
-
-</div>
+    <footer class="page-footer">
+      <div class="container">&copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet" class="white-text"><img src="/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>
+      </div>
+    </footer>
+  </div>
 
   <!-- Minified jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -142,7 +129,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
   <!-- Custom javascript -->
-  <script src="../public/assets/js/app.js"></script>
+  <script src="/assets/js/app.js"></script>
 
 </body>
 </html>
