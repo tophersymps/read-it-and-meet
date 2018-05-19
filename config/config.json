@@ -30,13 +30,7 @@
  
     "production": {
  
-        "username": "t87086jkjhm8sayp",
- 
-        "password": "ylx89pw45q96d3by",
- 
-        "database": "readit_db",
- 
-        "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "use_env_variable": "JAWSDB_URL",
  
         "dialect": "mysql"
  

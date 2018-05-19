@@ -7,7 +7,7 @@ var mysql = require("mysql");
 // TODO: Need to install MYSQL2 "npm install mysql2"
 
 // Local Connection
-var PORT = process.env.PORT || 8080; 
+var PORT = process.env.PORT || 3000; 
 // Heroku
 if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
