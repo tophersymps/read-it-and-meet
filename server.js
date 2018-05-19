@@ -10,7 +10,8 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static("public"));
+// app.use(express.static("public/assets"));
+app.use(express.static(__dirname + '/public'));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,19 +31,12 @@ app.use(passport.session()); // Persistant login sessions
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
-app.set("views", "./views");
+app.set("views", "./views/layouts");
 app.engine("hbs", exphbs({ 
   extname: ".hbs",
-  defaultLayout: "signin" 
+  defaultLayout: "index" 
 }));
 app.set("view engine", ".hbs");
-
-// Initiate Home Page? // TODO: Is this necessary
-// app.get('/dashboard', function(req, res) {
- 
-//   res.send('Welcome to Passport with Sequelize');
-
-// });
 
 // Models FIXME: Potentially move to a new 'app' folder
 var models = require("./models");
