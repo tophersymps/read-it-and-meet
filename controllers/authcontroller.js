@@ -29,3 +29,11 @@ exports.logout = function(req, res) {
     });
  
 }
+
+exports.booksread = function(req, res) {
+    res.render('booksRead');
+}
+
+exports.readinglist = function(req, res) {
+    res.render('readingList');
+}

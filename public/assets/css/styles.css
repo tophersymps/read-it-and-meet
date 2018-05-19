@@ -194,6 +194,7 @@
     letter-spacing: 0.225em;
     /* text-transform: uppercase; */
     color: #fff;
+    margin: 0 auto;
   }
   
   @media screen and (max-width: 736px) {
