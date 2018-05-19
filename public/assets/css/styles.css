@@ -39,6 +39,22 @@
             box-shadow: 0 1px 0 0 #0277bd;
   }
 
+  input:not([type]):focus:not([readonly]) + label,
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,
+input[type=password]:not(.browser-default):focus:not([readonly]) + label,
+input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+input[type=url]:not(.browser-default):focus:not([readonly]) + label,
+input[type=time]:not(.browser-default):focus:not([readonly]) + label,
+input[type=date]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime]:not(.browser-default):focus:not([readonly]) + label,
+input[type=datetime-local]:not(.browser-default):focus:not([readonly]) + label,
+input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
+input[type=number]:not(.browser-default):focus:not([readonly]) + label,
+input[type=search]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #0277bd;
+}
+
   body.landing #page-wrapper {
     background-image: -moz-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/banner.jpg");
     background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../images/banner.jpg");
@@ -316,273 +332,79 @@
 		background-size: cover;
 	}
 
-
-        /* .container-bottom {
-          margin: 0 auto;
-          max-width: 1280px;
-          width: 90%;
-          min-height: 5rem;
-          background-color: chartreuse;
-        }
-        
-        @media only screen and (min-width: 601px) {
-          .container-bottom {
-            width: 85%;
-          }
-        }
-        
-        @media only screen and (min-width: 993px) {
-          .container-bottom {
-            width: 70%;
-          }
-        }
-        
-        .container-bottom .row {
-          margin-left: -0.75rem;
-          margin-right: -0.75rem;
-        } */
-
-
-        /* ----------------------------------------
+/* ----------------------------------------
    Sign Up Page
    ------------------------------------- */
 
 
-   /* ----------------------------------------
-   Header
------------------------------------------- */
+   /* Header  */
 
-nav {
-  background-color: #434A5B;
-}
-
-h1.logo-wrapper {
-  margin: 0;
-}
-
-h1 span.logo-text {
-  vertical-align: 0.8rem;
-  font-size: 26px;
-  padding-left: 8px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-}
-
-h1 span.ampersand {
-  font-size: 26px;
-  font-family: 'Libre Baskerville', serif;
-}
-
-header .brand-logo {
-  padding: 10px 20px;
-}
-
-@media only screen and (min-width: 993px) {
-  header .brand-logo {
-    padding: 0 20px;
+  nav {
+    background-color: #434A5B;
   }
-}
 
-header .brand-logo img {
-  height: 42px;
-}
+  h1.logo-wrapper {
+    margin: 0;
+  }
 
-.hamburger {
-  background-color: #434A5B;
-}
+  h1 span.logo-text {
+    vertical-align: 0.8rem;
+    font-size: 26px;
+    padding-left: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+  }
 
-.btn-floating:hover, .btn-floating:focus {
-  background-color: #434A5B;
-}
+  h1 span.ampersand {
+    font-size: 26px;
+    font-family: 'Libre Baskerville', serif;
+  }
 
-/* Wrapper */
+  header .brand-logo {
+    padding: 10px 20px;
+  }
 
-.wrapper {
-  padding: 6em 0 4em 0 ;
-}
+  @media only screen and (min-width: 993px) {
+    header .brand-logo {
+      padding: 0 20px;
+    }
+  }
+
+  header .brand-logo img {
+    height: 42px;
+  }
+
+  /* Wrapper */
+
+  .wrapper {
+    padding: 2em 0 4em 0 ;
+  }
 
   .wrapper > .inner {
-    width: 60em;
-    margin: 0 auto;
+  /* width: 60em; */
+  margin: 0 auto;
   }
 
-    @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1280px) {
 
-      .wrapper > .inner {
-        width: 90%;
-      }
-
+    .wrapper > .inner {
+      width: 90%;
     }
 
-    @media screen and (max-width: 980px) {
+  }
 
-      .wrapper > .inner {
-        width: 100%;
-      }
+  @media screen and (max-width: 980px) {
 
-    }
-    
-    @media screen and (max-width: 980px) {
-
-      .wrapper {
-        padding: 4em 3em 2em 3em ;
-      }
-
+    .wrapper > .inner {
+      width: 100%;
     }
 
-    @media screen and (max-width: 736px) {
-
-      .wrapper {
-        padding: 3em 2em 1em 2em ;
-      }
-
-    }
+  }
 
 .wrapper.style5 {
-  background-color: #ffffff;
+  background-color:#fff;
   color: #4E4852;
 }
-
-  .wrapper.style5 strong, .wrapper.style5 b {
-    color: #2E3842;
-  }
-
-  .wrapper.style5 h2, .wrapper.style5 h3, .wrapper.style5 h4, .wrapper.style5 h5, .wrapper.style5 h6 {
-    color: #2E3842;
-  }
-
-  .wrapper.style5 hr {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 blockquote {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 code {
-    background: rgba(0, 0, 0, 0.0375);
-  }
-
-  .wrapper.style5 header p {
-    color: #8E8892;
-  }
-
-  .wrapper.style5 header.major h2, .wrapper.style5 header.major h3, .wrapper.style5 header.major h4, .wrapper.style5 header.major h5, .wrapper.style5 header.major h6 {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 header.major p {
-    color: #4E4852;
-  }
-
-  .wrapper.style5 label {
-    color: #2E3842;
-  }
-
-  .wrapper.style5 input[type="text"],
-  .wrapper.style5 input[type="password"],
-  .wrapper.style5 input[type="email"],
-  .wrapper.style5 select,
-  .wrapper.style5 textarea {
-    background: rgba(0, 0, 0, 0.0375);
-  }
-
-  .wrapper.style5 .select-wrapper:before {
-    color: #dfdfdf;
-  }
-
-  .wrapper.style5 input[type="checkbox"] + label,
-  .wrapper.style5 input[type="radio"] + label {
-    color: #4E4852;
-  }
-
-    .wrapper.style5 input[type="checkbox"] + label:before,
-    .wrapper.style5 input[type="radio"] + label:before {
-      background: rgba(0, 0, 0, 0.0375);
-    }
-
-  .wrapper.style5 input[type="checkbox"]:checked + label:before,
-  .wrapper.style5 input[type="radio"]:checked + label:before {
-    background: #2E3842;
-    color: #ffffff;
-  }
-
-  .wrapper.style5 ::-webkit-input-placeholder {
-    color: #8E8892 !important;
-  }
-
-  .wrapper.style5 :-moz-placeholder {
-    color: #8E8892 !important;
-  }
-
-  .wrapper.style5 ::-moz-placeholder {
-    color: #8E8892 !important;
-  }
-
-  .wrapper.style5 :-ms-input-placeholder {
-    color: #8E8892 !important;
-  }
-
-  .wrapper.style5 .formerize-placeholder {
-    color: #8E8892 !important;
-  }
-
-  .wrapper.style5 .icon.major {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 ul.alt li {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 table tbody tr {
-    border-color: #dfdfdf;
-  }
-
-    .wrapper.style5 table tbody tr:nth-child(2n + 1) {
-      background-color: rgba(0, 0, 0, 0.0375);
-    }
-
-  .wrapper.style5 table th {
-    color: #2E3842;
-  }
-
-  .wrapper.style5 table thead {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 table tfoot {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 table.alt tbody tr td {
-    border-color: #dfdfdf;
-  }
-
-  .wrapper.style5 input[type="submit"],
-  .wrapper.style5 input[type="reset"],
-  .wrapper.style5 input[type="button"],
-  .wrapper.style5 button,
-  .wrapper.style5 .button {
-    box-shadow: inset 0 0 0 2px #dfdfdf;
-    color: #2E3842;
-  }
-
-    .wrapper.style5 input[type="submit"]:hover,
-    .wrapper.style5 input[type="reset"]:hover,
-    .wrapper.style5 input[type="button"]:hover,
-    .wrapper.style5 button:hover,
-    .wrapper.style5 .button:hover {
-      background-color: rgba(0, 0, 0, 0.0375);
-    }
-
-    .wrapper.style5 input[type="submit"]:active,
-    .wrapper.style5 input[type="reset"]:active,
-    .wrapper.style5 input[type="button"]:active,
-    .wrapper.style5 button:active,
-    .wrapper.style5 .button:active {
-      background-color: rgba(0, 0, 0, 0.1);
-    }
 
   @media screen and (max-width: 736px) {
 
@@ -592,8 +414,6 @@ header .brand-logo img {
 
   }
 
-
-
 /* ----------------------------------------
    Footer
 ------------------------------------------ */
@@ -601,7 +421,7 @@ header .brand-logo img {
   footer.page-footer {
     padding: 25px;
     margin: 0;
-    background-color: #525252;
+    background-color: #434A5B;
   }
     
    
