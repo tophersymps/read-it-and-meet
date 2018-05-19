@@ -2,3 +2,4 @@ node_modules
 /OAuthAttempt/myWork/config/keys.js
 /passport-sequelize/app/config/config.json
 /config/config.json
+.DS_Store
