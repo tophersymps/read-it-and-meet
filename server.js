@@ -34,7 +34,7 @@ var exphbs = require("express-handlebars");
 app.set("views", "./views/layouts");
 app.engine("hbs", exphbs({ 
   extname: ".hbs",
-  defaultLayout: "index" 
+  // defaultLayout: "index" 
 }));
 app.set("view engine", ".hbs");
 
@@ -54,9 +54,9 @@ models.sequelize.sync().then(function() {
   console.log(err, "Something went wrong with the Database Update...");
 });
 
-app.listen(5000, function(err) {
+app.listen(PORT, function(err) {
   if (!err) {
-    console.log("Site is live! visit: http://localhost:5000");
+    console.log("Site is live! visit: http://localhost:" + PORT);
   } else {
     console.log(err);
   }

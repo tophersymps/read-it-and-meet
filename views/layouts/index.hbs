@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Read It & Meet | Virtual Book Club</title>
+  <title>Read It & Meet</title>
 
   <!--Import Fonts-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-  <!-- Compiled and minified CSS -->
+  <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!--Custom Styles-->
@@ -29,18 +29,19 @@
           </div>
         </div>
         <div class="col s12 m6 l4">
-          <div class="card sign-in">
+          <form class="card sign-in" id="signin" name="signin" method="post" action="signin">
+
             <div class="card-content black-text">
               <span class="card-title">Sign In Now</span>
               <div class="input-field">
                 <i class="material-icons prefix">account_circle</i>
-                <input placeholder="User ID" id="user_id" type="text" class="validate">
+                <input placeholder="User Email" id="email" name="email" type="text" class="validate" placeholder="User Email">
               </div>
               <div class="input-field">
                 <i class="material-icons prefix">lock</i>
-                <input placeholder="Password" id="password" type="password" class="validate">
+                <input placeholder="Password" id="password" name="password" type="password" class="validate">
               </div>
-              <a class="waves-effect waves-light light-blue darken-3 btn"><i class="material-icons left">keyboard_tab</i>Sign In</a>
+              <button class="waves-effect waves-light light-blue darken-3 btn" type="submit" value="Sign In"><i class="material-icons left">keyboard_tab</i>Sign In</button>
             </div>
             <div class="card-action">
                 <p class="black-text">or you can sign in via your social network</p>
@@ -49,11 +50,11 @@
             </div>
             <div>
                 Don't have an account yet?<br/>
-                <a class="" href="#">
+                <a class="" href="/signup">
                 Create an account
                 </a>
                 </div>
-          </div>          
+          </form>          
         </div>
       </div>
     </section>
@@ -62,17 +63,15 @@
     <section id="features">
       <div class="feature">
         <div class="image"><img src="/assets/images/pic01.jpg" alt="" /></div><div class="content">
-          <h2>Magna primis lobortis<br />
-          sed ullamcorper</h2>
-          <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+          <h2>Sign Up</h2>
+          <p>Create a free account to start organinzing your reading library.</p>
         </div>
       </div>
       
       <div class="feature">
-        <div class="image"><img src="/assets/images/pic02.jpg" alt="" /></div><div class="content">
-          <h2>Tortor dolore feugiat<br />
-          elementum magna</h2>
-          <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        <div class="image"><img src="/assets/images/pic02.png" alt="" /></div><div class="content">
+          <h2>Search for Books</h2>
+          <p>Easily search for books to </p>
         </div>
       </div>
       <div class="feature">
@@ -93,7 +92,7 @@
               <h2 class="center white-text"><i class="material-icons">group</i></h2>
               <h5 class="center white-text">User Experience Focused</h5>
 
-              <p class="light white-text">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+              <p class="light white-text">By utilizing elements and principles of Material  Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
             </div>
           </div>
           <div class="col s12 m4 l4">
@@ -117,10 +116,7 @@
     </section>
 
     <footer class="page-footer">
-      <div class="footer-copyright">
-        <div class="container">
-          &copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet"><img src="../../public/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://elark2016.github.io/Draft-Hopper/assets/pages/beerInfo.html" target="_blank">Admin</a>
-        </div>
+      <div class="container">&copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet" class="white-text"><img src="/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>
       </div>
     </footer>
   </div>
@@ -132,27 +128,8 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  <!-- Google Stuff -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK8v4mS7joKuDEI03pAmCqQ2CJH77UBFM&libraries=places&callback=initMap"
-    async defer></script>
-
-  <!-- RSS Feed -->
-  <script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
-
   <!-- Custom javascript -->
-  <!-- <script src="assets/js/beerData.js"></script> -->
   <script src="/assets/js/app.js"></script>
-  <!-- <script src="assets/js/map.js"></script> -->
-
-  <script>
-  (function($){
-    $(function(){
-      $('.parallax').parallax();
-      $('.button-collapse').sideNav();
-      $('ul.tabs').tabs();
-    }); // end of document ready
-  })(jQuery); // end of jQuery name space
-  </script>
 
 </body>
 </html>

@@ -27,7 +27,7 @@ module.exports = function(app, passport) {
          
             return next();
              
-        res.redirect('/');
+        res.redirect('/dashboard');
      
     };
 
