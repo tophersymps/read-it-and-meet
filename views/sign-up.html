@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Read It & Meet | Sign Up</title>
+
+  <!-- Import Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i|Raleway:300,400" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="../public/assets/css/styles.css">
+</head>
+
+<body class="landing">
+  <div id="page-wrapper">
+
+      <header>
+          <div class="navbar-fixed">
+            <nav>
+              <h1 class="logo-wrapper">
+                <a href="dashboard.html" class="brand-logo">
+                  <img src="../public/assets/images/Book@2x.png" alt="Read It & Meet logo">
+                  <span class="logo-text hide-on-med-and-down">Read It <span class="ampersand">&</span> Meet</span>
+                </a>
+              </h1>
+            </nav>
+          </div>
+        </header>
+
+    <section id="signup" class="signup-container">
+      <div class="row flex-s">
+        <div class="col s12 m12 l12">
+          <div class="container white-text">
+            <h2>Sign Up</h2>
+						<p>Create an account to start organizing your reading list.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper style5">
+        <div class="inner">
+
+            <form id="signup" name="signup" method="post" action="/signup">
+              <label for="email">Email Address</label>
+              <input class="text" name="email" type="email" />
+              <label for="firstname">Firstname</label>
+              <input name="firstname" type="text" />
+              <label for="lastname">Lastname</label>
+              <input name="lastname" type="text" />
+              <label for="password">Password</label>
+              <input name="password" type="password" />
+              <input class="btn" type="submit" value="Sign Up" />
+          </form>
+
+        </div>
+      </section>
+
+  <footer class="page-footer">
+    <div class="container">&copy; 2018&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/tophersymps/read-it-and-meet" class="white-text"><img src="../public/assets/images/GitHub-Mark-Light-32px.png" width="13" height="13"> View Github Repo</a>
+    </div>
+  </footer>
+
+
+
+
+
+</div>
+
+  <!-- Minified jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <!-- Custom javascript -->
+  <script src="../public/assets/js/app.js"></script>
+
+</body>
+</html>
