@@ -3,9 +3,23 @@ var passport = require("passport");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var env = require("dotenv").load();
+var mysql = require("mysql");
 // TODO: Need to install MYSQL2 "npm install mysql2"
 
-var PORT = process.env.PORT || 8080;
+// Local Connection
+var PORT = process.env.PORT || 8080; 
+// Heroku
+if(process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    port: 3306,
+    host: "localhost",
+    user: "root",
+    password: "codecamp2018",
+    database: "burgers_db"
+  });
+};
 
 var app = express();
 
