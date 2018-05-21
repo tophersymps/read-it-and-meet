@@ -3,3 +3,4 @@ node_modules
 /passport-sequelize/app/config/config.json
 /config/config.json
 .DS_Store
+.env
