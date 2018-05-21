@@ -11,17 +11,17 @@ var connection = mysql.createConnection(process.env.JAWSDB_URL);
 // Local Connection
 var PORT = process.env.PORT || 3000; 
 // Heroku
-if(process.env.JAWSDB_URL){
+// if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    port: 3306,
-    host: "localhost",
-    user: "root",
-    password: "codecamp2018",
-    database: "readit_db"
-  });
-};
+// } else {
+//   connection = mysql.createConnection({
+//     port: 3306,
+//     host: "localhost",
+//     user: "root",
+//     password: "codecamp2018",
+//     database: "readit_db"
+//   });
+// };
 
 var app = express();
 
