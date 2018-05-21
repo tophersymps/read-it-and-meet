@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Book Search</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Book Search</h1>
+
+    <!-- This form will be where users enter the name of the book/author they want to find -->
+    <form id="book-form">
+      <label for="book-input">Search for a book</label>
+      <input type="text" id="book-input" placeholder=" title or author "><br>
+
+      <!-- This button will trigger our AJAX call for the book search -->
+      <input id="find-book" type="submit" value="Book Search">
+    </form>
+
+    <!-- Dump results from JSON here -->
+    <div class="have-read">
+      <h3>Books I Want To Read</h3>
+      <div class="book-view"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      var mysql = require("mysql");
+      var inquirer = require("inquirer");
+
+      // create the connection information for the sql database
+      var connection = mysql.createConnection({
+        host: "localhost",
+        port: 8889,
+
+        // Your username
+        user: "root",
+
+        // Your password
+        password: "root",
+        database: "books_db"
+      });
+
+      // connect to the mysql server and sql database
+        connection.connect(function(err) {
+          if (err) throw err;
+          // run the start function after the connection is made to prompt the user
+          start();
+          console.log("you are connected to the database");
+        });
+
+      // This .on("click") function will trigger the AJAX Call
+      $("#find-book").on("click", function(event) {
+
+        event.preventDefault();
+
+        var book = $("#book-input").val();
+        var queryURL = "https://www.googleapis.com/books/v1/volumes?q=search" + book;
+
+        $.ajax({
+            url: queryURL,
+            dataType: "json",
+            success: function (data){
+            },
+            type: "GET"
+        })
+        .then(function(response) {
+            console.log(queryURL);
+            var results = response.items;
+            
+            for (var i = 0; i < results.length; i++) {
+              // Google ID; will be used as the unique identifier for the books that get added to the db);
+              console.log("Google ID: " + results[i].id);    
+
+              
+              // Displays the book cover image for the books that are returned from the api
+              // An image is dynamically created for each result returned
+              var bookImage = $("<img>");
+              bookImage.attr("src", results[i].volumeInfo.imageLinks.thumbnail);
+              var bookImageUrl = results[i].volumeInfo.imageLinks.thumbnail;
+              
+              // Create button for books already read
+              // Buttons are dynamically created for each result that is returned from the api
+              var readButton = $("<input>");
+              readButton.attr("id", "books-read");
+              readButton.attr("type", "submit");
+              readButton.attr("value", "Already Read");
+              
+              // Create button for books that the user wants to read
+              // Buttons are dynamically created for each result that is returned from the api
+              var wantToRead = $("<input>");
+              wantToRead.attr("id", "want-to-read");
+              wantToRead.attr("type", "submit");
+              wantToRead.attr("value", "I Want To Read");
+
+              // Book title, author and book cover image are displayed to the page based on api search results
+              $(".book-view").append(
+                  "Book Title: " + results[i].volumeInfo.title + "<br>" +
+                  "Author: " + results[i].volumeInfo.authors + "<br>" + "<br>");
+              $(".book-view").append(bookImage);
+              $(".book-view").append("<br>" + "<br>");
+              $(".book-view").append(readButton);
+              $(".book-view").append(" ");
+              $(".book-view").append(wantToRead);
+              $(".book-view").append("<br>" + "<br>");
+            }
+        })
+      });
+
+  
+      $("#want-to-read").on("click", function(event){
+            // Send the POST request.
+          $.ajax("/api/burgers/", {
+            type: "POST",
+            data: newBurger
+          }).then(
+            function() {
+              console.log("created new burger");
+              // Reload the page to get the updated list
+              location.reload();
+            }
+          );
+        });
+      
+    </script>
+  </div>
+</body>
+</html>
