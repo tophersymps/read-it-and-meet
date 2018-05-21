@@ -3,7 +3,7 @@ var passport = require("passport");
 var session = require("express-session");
 var bodyParser = require("body-parser");
 var env = require("dotenv").load();
-var mysql = require("mysql");
+var mysql = require("mysql2");
 // JAWSDB Connection
 var connection = mysql.createConnection(process.env.JAWSDB_URL);
 // TODO: Need to install MYSQL2 "npm install mysql2"
