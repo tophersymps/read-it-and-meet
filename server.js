@@ -4,6 +4,8 @@ var session = require("express-session");
 var bodyParser = require("body-parser");
 var env = require("dotenv").load();
 var mysql = require("mysql");
+// JAWSDB Connection
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 // TODO: Need to install MYSQL2 "npm install mysql2"
 
 // Local Connection
