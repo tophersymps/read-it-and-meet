@@ -19,7 +19,7 @@ if(process.env.JAWSDB_URL){
     host: "localhost",
     user: "root",
     password: "codecamp2018",
-    database: "burgers_db"
+    database: "readit_db"
   });
 };
 
