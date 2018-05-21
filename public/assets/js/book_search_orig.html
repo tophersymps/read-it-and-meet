@@ -33,17 +33,17 @@
       var inquirer = require("inquirer");
 
       // create the connection information for the sql database
-      var connection = mysql.createConnection({
-        host: "localhost",
-        port: 8889,
+      // var connection = mysql.createConnection({
+      //   host: "localhost",
+      //   port: 8889,
 
-        // Your username
-        user: "root",
+      //   // Your username
+      //   user: "root",
 
-        // Your password
-        password: "root",
-        database: "books_db"
-      });
+      //   // Your password
+      //   password: "root",
+      //   database: "books_db"
+      // });
 
       // connect to the mysql server and sql database
         connection.connect(function(err) {
